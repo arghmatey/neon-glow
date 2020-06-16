@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import TextInput from './components/TextInput';
+import TextOutput from './components/TextOutput';
+import CodeOutput from './components/CodeOutput';
 import './App.css';
 
 class App extends Component {
@@ -10,12 +13,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='App'>
         <header>
 
         </header>
-        <main>
-
+        <main className='App-main'>
+          <TextInput />
+          <TextOutput />
+          <CodeOutput />
         </main>
       </div>
     )
