@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        Neon Glow
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    text: '',
+    font: '',
+    color: '',
+  };
+
+  render() {
+    return (
+      <div>
+      </div>
+    )
+  }
 }
 
 export default App;
