@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import OptionsInput from './components/OptionsInput';
 import TextOutput from './components/TextOutput';
 import CodeOutput from './components/CodeOutput';
+import { colorCSS } from './utils/utils';
 import './App.css';
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
   }
 
   handleUpdateColor = async updatedColor => {
+    colorCSS(updatedColor);
     this.setState({
       color: updatedColor
     })
