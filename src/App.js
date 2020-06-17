@@ -7,9 +7,20 @@ import './App.css';
 class App extends Component {
   state = {
     text: '',
-    font: '',
     color: '',
   };
+
+  handleUpdateText = async updatedText => {
+    this.setState({
+      text: updatedText
+    })
+  }
+
+  handleUpdateColor = async updatedColor => {
+    this.setState({
+      color: updatedColor
+    })
+  }
 
   render() {
     return (
@@ -18,8 +29,13 @@ class App extends Component {
           <h1>Neon Text Generator</h1>
         </header>
         <main className='App-main'>
-          <OptionsInput />
-          <TextOutput />
+          <OptionsInput
+            handleUpdateText={this.handleUpdateText}
+            handleUpdateColor={this.handleUpdateColor}
+          />
+          <TextOutput
+            text={this.state.text}
+            color={this.state.color} />
           <CodeOutput />
         </main>
       </div>
