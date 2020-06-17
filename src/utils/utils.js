@@ -11,8 +11,11 @@ export const colorCSS = hex => {
         b = "0x" + hex[5] + hex[6];
     }
 
-    hex = "rgb(" + +r + "," + +g + "," + +b + ")";
+    let rgbInside = "rgb(" + +r + "," + +g + "," + +b + ")";
+    let rgbMiddle = "rgb(" + +r * .536 + "," + +g * .65 + "," + +b * .924 + ")";
+    let rgbOutside = "rgb(" + +r * .48 + "," + +g * .68 + "," + +b * .966 + ")";
 
-    var textOutput = document.getElementById('textOutput');
-    textOutput.style.color = hex;
+    const textOutput = document.getElementById('textOutput');
+    textOutput.style.color = rgbInside;
+    textOutput.style.textShadow = `2px 2px 3px ${rgbInside}, 0px 0px 4px ${rgbMiddle}, 0px 0px 5px ${rgbMiddle}, 0px 0px 6px ${rgbOutside}, 0px 0px 8px ${rgbOutside}, 0px 0px 10px ${rgbOutside}, 0px 0px 20px ${rgbOutside}, 1px 1px 30px ${rgbOutside}`;
 }

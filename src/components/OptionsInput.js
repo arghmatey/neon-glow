@@ -6,12 +6,10 @@ class TextInput extends Component {
     }
 
     handleChangeText = e => {
-        console.log(e.target.value);
         this.props.handleUpdateText(e.target.value);
     }
 
     handleChangeColor = e => {
-        console.log(e.target.value);
         this.props.handleUpdateColor(e.target.value);
     }
 

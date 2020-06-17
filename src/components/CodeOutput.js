@@ -1,8 +1,8 @@
 import React from 'react';
 
 const CodeOutput = props => (
-    <div>
-
+    <div className='codeWrapper'>
+        text-shadow:
     </div>
 )
 

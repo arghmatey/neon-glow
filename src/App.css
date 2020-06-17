@@ -1,6 +1,6 @@
 @font-face {
   font-family: neon-sign;
-  src: url(/src/fonts/Clip.ttf)
+  src: url(../src/fonts/Clip.ttf)
 }
 
 .App {
@@ -16,9 +16,23 @@
 
 .textWrapper {
   background-color: black;
+  font-family: neon-sign;
+  font-size: 48px;
+  margin: 15px;
   height: 200px;
   width: 400px;
   text-align: center;
   justify-content: center;
   color: white;
+}
+
+.codeWrapper {
+  font-family: monospace;
+  justify-content: left;
+  align-items: flex-start;
+  margin: 15px;
+  outline: 1px solid grey;
+  padding: 24px;
+  height: 150px;
+  width: 350px;
 }
