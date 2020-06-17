@@ -20,7 +20,7 @@ class TextInput extends Component {
             <div>
                 <form className='input-form'>
                     <label htmlFor='text'>Enter text:</label>
-                    <input id='text' default='Neon Glow' onChange={this.handleChangeText}></input>
+                    <input id='text' autoComplete='off' onChange={this.handleChangeText}></input>
                     <label htmlFor='color'>Choose a color:</label>
                     <input type='color' id='color' onChange={this.handleChangeColor} />
                 </form>

@@ -13,3 +13,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.textWrapper {
+  background-color: black;
+  height: 200px;
+  width: 400px;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
