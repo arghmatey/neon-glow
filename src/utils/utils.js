@@ -12,10 +12,12 @@ export const colorCSS = hex => {
     }
 
     let rgbInside = "rgb(" + +r + "," + +g + "," + +b + ")";
-    let rgbMiddle = "rgb(" + +r * .536 + "," + +g * .65 + "," + +b * .924 + ")";
-    let rgbOutside = "rgb(" + +r * .48 + "," + +g * .68 + "," + +b * .966 + ")";
+    let rgbMiddle = "rgb(" + Math.round(+r * .536) + "," + Math.round(+g * .65) + "," + Math.round(+b * .924) + ")";
+    let rgbOutside = "rgb(" + Math.round(+r * .48) + "," + Math.round(+g * .68) + "," + Math.round(+b * .966) + ")";
 
     const textOutput = document.getElementById('textOutput');
+    const codeOutput = document.getElementById('codeOutput');
     textOutput.style.color = rgbInside;
     textOutput.style.textShadow = `2px 2px 3px ${rgbInside}, 0px 0px 4px ${rgbMiddle}, 0px 0px 5px ${rgbMiddle}, 0px 0px 6px ${rgbOutside}, 0px 0px 8px ${rgbOutside}, 0px 0px 10px ${rgbOutside}, 0px 0px 20px ${rgbOutside}, 1px 1px 30px ${rgbOutside}`;
+    codeOutput.innerHTML = `2px 2px 3px ${rgbInside},<br/>0px 0px 4px ${rgbMiddle},<br/>0px 0px 5px ${rgbMiddle},<br/>0px 0px 6px ${rgbOutside},<br/>0px 0px 8px ${rgbOutside},<br/>0px 0px 10px ${rgbOutside},<br/>0px 0px 20px ${rgbOutside},<br/>1px 1px 30px ${rgbOutside}`;
 }
