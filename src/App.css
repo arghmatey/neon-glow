@@ -7,11 +7,26 @@
   text-align: center;
 }
 
+.App-header {
+  background-color: black;
+  font-family: neon-sign;
+  font-size: 48px;
+  margin-bottom: 15px;
+  line-height: 100px;
+  height: 100px;
+  color: rgb(46, 255, 231);
+  text-shadow: 2px 2px 3px rgb(46, 255, 231), 0px 0px 4px rgb(25, 166, 213), 0px 0px 5px rgb(25, 166, 213), 0px 0px 6px rgb(22, 173, 223), 0px 0px 8px rgb(22, 173, 223), 0px 0px 10px rgb(22, 173, 223), 0px 0px 20px rgb(22, 173, 223), 1px 1px 30px rgb(22, 173, 223)
+}
+
 .App-main, .App-main>*, .input-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.input-form input {
+  margin: 10px;
 }
 
 .textWrapper {
@@ -35,4 +50,18 @@
   padding: 24px;
   height: 150px;
   width: 350px;
+}
+
+.shadowOutput {
+  font-family: monospace;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.App-footer {
+  background-color: lightgrey;
+  position: absolute;
+  bottom: 0px;
+  padding: 10px;
+  width: 100%;
 }

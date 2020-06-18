@@ -27,8 +27,8 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <header>
-          <h1>Neon Text Generator</h1>
+        <header className='App-header'>
+          Neon Text Generator
         </header>
         <main className='App-main'>
           <OptionsInput
@@ -40,6 +40,9 @@ class App extends Component {
             color={this.state.color} />
           <CodeOutput />
         </main>
+        <footer className='App-footer'>
+          Made by Sarah W || <a href='https://www.linkedin.com/in/sarah--williams/'>LinkedIn</a>  <a href='https://github.com/arghmatey'>Github</a> || <a href='https://www.dafont.com/clip.font'>Font Used</a>
+        </footer>
       </div>
     )
   }
