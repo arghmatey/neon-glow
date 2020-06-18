@@ -18,7 +18,7 @@
   text-shadow: 2px 2px 3px rgb(46, 255, 231), 0px 0px 4px rgb(25, 166, 213), 0px 0px 5px rgb(25, 166, 213), 0px 0px 6px rgb(22, 173, 223), 0px 0px 8px rgb(22, 173, 223), 0px 0px 10px rgb(22, 173, 223), 0px 0px 20px rgb(22, 173, 223), 1px 1px 30px rgb(22, 173, 223)
 }
 
-.App-main, .App-main>*, .input-form {
+.App-main, .App-main>*>*, .input-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
