@@ -31,13 +31,13 @@ class App extends Component {
           Neon Text Generator
         </header>
         <main className='App-main'>
+          <TextOutput
+            text={this.state.text}
+            color={this.state.color} />
           <OptionsInput
             handleUpdateText={this.handleUpdateText}
             handleUpdateColor={this.handleUpdateColor}
           />
-          <TextOutput
-            text={this.state.text}
-            color={this.state.color} />
           <CodeOutput />
         </main>
         <footer className='App-footer'>
