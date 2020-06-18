@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import OptionsInput from './components/OptionsInput';
 import TextOutput from './components/TextOutput';
 import CodeOutput from './components/CodeOutput';
@@ -32,18 +32,20 @@ class App extends Component {
           Neon Text Generator
         </header>
         <main className='App-main'>
-          <Route exact path='/' render={() =>
-            <div>
-              <TextOutput
-                text={this.state.text}
-                color={this.state.color} />
-              <OptionsInput
-                handleUpdateText={this.handleUpdateText}
-                handleUpdateColor={this.handleUpdateColor}
-              />
-              <CodeOutput />
-            </div>
-          } />
+          <Router>
+            <Route exact path='/' render={() =>
+              <div>
+                <TextOutput
+                  text={this.state.text}
+                  color={this.state.color} />
+                <OptionsInput
+                  handleUpdateText={this.handleUpdateText}
+                  handleUpdateColor={this.handleUpdateColor}
+                />
+                <CodeOutput />
+              </div>
+            } />
+          </Router>
         </main>
         <footer className='App-footer'>
           Made by Sarah W || <a href='https://www.linkedin.com/in/sarah--williams/'>LinkedIn</a>  <a href='https://github.com/arghmatey'>Github</a> || <a href='https://www.dafont.com/clip.font'>Font Used</a>
