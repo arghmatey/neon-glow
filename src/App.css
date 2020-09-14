@@ -3,11 +3,8 @@
   src: url(../src/fonts/Clip.ttf)
 }
 
-.App {
-  text-align: center;
-}
-
 .App-header {
+  text-align: center;
   font-family: neon-sign;
   font-size: 48px;
   line-height: 150px;
@@ -27,11 +24,22 @@
   flex-direction: row;
 }
 
-.input-form {
-  display: flex;
-  justify-content: center;
-  margin: 15px 5px;
+.form-wrapper {
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 5px;
+  margin: 15px 5px;
+}
+
+.form-wrapper form input {
+  margin-bottom: 7px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .textWrapper {
