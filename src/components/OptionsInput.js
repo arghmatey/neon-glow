@@ -30,11 +30,11 @@ class TextInput extends Component {
                     <label htmlFor='color'>Choose a color:</label><br />
                     <input type='color' id='color' onChange={this.handleChangeColor} /><br />
                     <label htmlFor='color'>Glow Intensity:</label><br />
-                    <input type='range' id='glow' /><br />
+                    <input type='range' id='glow' disabled /><br />
                 </form>
                 <div className='buttons'>
                     <button onClick={this.handleClearInput}>Clear</button>
-                    <button>Copy</button>
+                    <button disabled>Copy</button>
                 </div>
             </div>
         )
