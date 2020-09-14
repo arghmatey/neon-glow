@@ -8,36 +8,39 @@
 }
 
 .App-header {
-  background-color: black;
   font-family: neon-sign;
   font-size: 48px;
-  margin-bottom: 15px;
-  line-height: 100px;
-  height: 100px;
+  line-height: 150px;
   color: rgb(46, 255, 231);
   text-shadow: 2px 2px 3px rgb(46, 255, 231), 0px 0px 4px rgb(25, 166, 213), 0px 0px 5px rgb(25, 166, 213), 0px 0px 6px rgb(22, 173, 223), 0px 0px 8px rgb(22, 173, 223), 0px 0px 10px rgb(22, 173, 223), 0px 0px 20px rgb(22, 173, 223), 1px 1px 30px rgb(22, 173, 223)
 }
 
-.App-main, .App-main>*>*, .input-form {
+.App-main, .codeWrapper, .textWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.input-form input {
-  margin: 10px;
+.in-and-out {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-form {
+  display: flex;
+  justify-content: center;
+  margin: 15px 5px;
+  background-color: white;
 }
 
 .textWrapper {
   background-color: black;
   font-family: neon-sign;
   font-size: 48px;
-  margin: 15px;
+  margin: 15px 7px;
   height: 200px;
   width: 400px;
-  text-align: center;
-  justify-content: center;
   color: white;
 }
 
@@ -45,8 +48,9 @@
   font-family: monospace;
   justify-content: left;
   align-items: flex-start;
-  margin: 15px;
-  outline: 1px solid grey;
+  margin: 15px 7px;
+  background-color: white;
+  /* outline: 1px solid grey; */
   padding: 24px;
   height: 150px;
   width: 350px;

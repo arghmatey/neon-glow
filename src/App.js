@@ -34,15 +34,17 @@ class App extends Component {
         <main className='App-main'>
           <Router>
             <Route exact path='/' render={() =>
-              <div>
-                <TextOutput
-                  text={this.state.text}
-                  color={this.state.color} />
+              <div className='in-and-out'>
                 <OptionsInput
                   handleUpdateText={this.handleUpdateText}
                   handleUpdateColor={this.handleUpdateColor}
                 />
-                <CodeOutput />
+                <div>
+                  <TextOutput
+                    text={this.state.text}
+                    color={this.state.color} />
+                  <CodeOutput />
+                </div>
               </div>
             } />
           </Router>

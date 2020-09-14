@@ -15,8 +15,8 @@ class TextInput extends Component {
 
     render() {
         return (
-            <div>
-                <form className='input-form'>
+            <div className='input-form'>
+                <form>
                     <div>
                         <label htmlFor='text'>Enter text:</label>
                         <input id='text' autoComplete='off' onChange={this.handleChangeText}></input>
