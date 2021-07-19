@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import OptionsInput from './components/OptionsInput';
 import TextOutput from './components/TextOutput';
 import CodeOutput from './components/CodeOutput';
-import { colorCSS } from './utils/utils';
+import { hslCSS } from './utils/utils';
 import './App.css';
 
 class App extends Component {
@@ -18,11 +18,8 @@ class App extends Component {
     })
   }
 
-  handleUpdateColor = async updatedColor => {
-    colorCSS(updatedColor);
-    this.setState({
-      color: updatedColor
-    })
+  handleColorUpdate = async updatedColor => {
+    hslCSS(updatedColor);
   }
 
   render() {
@@ -37,12 +34,11 @@ class App extends Component {
               <div className='in-and-out'>
                 <OptionsInput
                   handleUpdateText={this.handleUpdateText}
-                  handleUpdateColor={this.handleUpdateColor}
+                  handleColorUpdate={this.handleColorUpdate}
                 />
                 <div>
                   <TextOutput
-                    text={this.state.text}
-                    color={this.state.color} />
+                    text={this.state.text}/>
                   <CodeOutput />
                 </div>
               </div>

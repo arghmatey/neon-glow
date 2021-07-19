@@ -10,12 +10,12 @@ class TextInput extends Component {
     }
 
     handleChangeColor = e => {
-        this.props.handleUpdateColor(e.target.value);
+        this.props.handleColorUpdate(e.target.value);
     }
 
     handleClearInput = e => {
         this.props.handleUpdateText('');
-        this.props.handleUpdateColor('');
+        this.props.handleColorUpdate('');
         document.getElementById('input-form').reset();
         document.getElementById('colorOutput').innerHTML = '';
         document.getElementById('shadowOutput').innerHTML = '';
@@ -25,11 +25,10 @@ class TextInput extends Component {
         return (
             <div className='form-wrapper'>
                 <form id='input-form'>
-                    <label htmlFor='text'>Enter text:</label><br />
-                    <input id='text' autoComplete='off' onChange={this.handleChangeText}></input><br />
-                    <label htmlFor='color'>Choose a color:</label><br />
-                    <input type='color' id='color' onChange={this.handleChangeColor} /><br />
-                    <label htmlFor='color'>Glow Intensity:</label><br />
+                    <input id='text' autoComplete='off' onChange={this.handleChangeText} placeholder="Enter text here!"></input><br />
+                    <div>Color Slider</div>
+                    <input type='range' id='color' min='0' max='360' onChange={this.handleChangeColor} /><br />
+                    <label htmlFor='color'>Glow Intensity</label><br />
                     <input type='range' id='glow' disabled /><br />
                 </form>
                 <div className='buttons'>
