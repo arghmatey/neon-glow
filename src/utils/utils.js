@@ -1,3 +1,4 @@
+// input type color returns hex code. below function will translate into rgb and set the style 
 export const colorCSS = hex => {
     let r = 0, g = 0, b = 0;
 
@@ -22,4 +23,38 @@ export const colorCSS = hex => {
     textOutput.style.textShadow = `2px 2px 3px ${rgbInside}, 0px 0px 4px ${rgbMiddle}, 0px 0px 5px ${rgbMiddle}, 0px 0px 6px ${rgbOutside}, 0px 0px 8px ${rgbOutside}, 0px 0px 10px ${rgbOutside}, 0px 0px 20px ${rgbOutside}, 1px 1px 30px ${rgbOutside}`;
     shadowOutput.innerHTML = `2px 2px 3px ${rgbInside},<br/>0px 0px 4px ${rgbMiddle},<br/>0px 0px 5px ${rgbMiddle},<br/>0px 0px 6px ${rgbOutside},<br/>0px 0px 8px ${rgbOutside},<br/>0px 0px 10px ${rgbOutside},<br/>0px 0px 20px ${rgbOutside},<br/>1px 1px 30px ${rgbOutside};`;
     colorOutput.innerHTML = `${rgbInside};`;
+}
+
+// New function to use hsl instead of rbg.
+// This allows passing of color without having to do conversion math first. 7/19/21
+export const hslCSS = hsl => {
+    let hslInside = `hsl(${hsl}, 100%, 90%)`;
+    let hslMiddle = `hsl(${hsl}, 100%, 70%)`;
+    let hslOutside = `hsl(${hsl}, 100%, 50%)`;
+
+    const textOutput = document.getElementById('textOutput');
+    textOutput.style.color = hslInside;
+    textOutput.style.textShadow = 
+    `0px 0px 5px ${hslInside}, 
+    0px 0px 10px ${hslMiddle}, 
+    0px 0px 10px ${hslMiddle}, 
+    0px 0px 15px ${hslOutside}, 
+    0px 0px 20px ${hslOutside}, 
+    0px 0px 30px ${hslOutside}, 
+    0px 0px 30px ${hslOutside}, 
+    0px 0px 30px ${hslOutside}`;
+
+    const shadowOutput = document.getElementById('shadowOutput');
+    shadowOutput.innerHTML = 
+    `0px 0px 5px ${hslInside},<br/>
+    0px 0px 10px ${hslMiddle},<br/>
+    0px 0px 10px ${hslMiddle},<br/>
+    0px 0px 15px ${hslOutside},<br/>
+    0px 0px 20px ${hslOutside},<br/>
+    0px 0px 30px ${hslOutside},<br/>
+    0px 0px 30px ${hslOutside},<br/>
+    0px 0px 30px ${hslOutside};`;
+    
+    const colorOutput = document.getElementById('colorOutput');
+    colorOutput.innerHTML = `${hslInside};`;
 }
