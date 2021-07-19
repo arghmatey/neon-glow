@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CodeOutput = props => (
+const CodeOutput = () => (
     <div className='codeWrapper'>
         <span>color: <span id='colorOutput'></span></span>
         text-shadow:
