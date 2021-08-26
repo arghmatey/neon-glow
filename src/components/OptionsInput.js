@@ -19,7 +19,7 @@ const TextInput = (props) => {
 
     return (
         <div className='form-wrapper'>
-            <form id='input-form'>
+            <div id='input-form'>
 
                 <span>
                 <label htmlFor='text'>Enter Text:</label>
@@ -31,7 +31,7 @@ const TextInput = (props) => {
                 <input type='range' id='color' min='0' max='360' onChange={handleChangeColor}/>
                 </span>
 
-            </form>
+            </div>
             <div className='buttons'>
                 <button onClick={handleClearInput}>Clear</button>
             </div>
