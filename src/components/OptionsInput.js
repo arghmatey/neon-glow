@@ -1,43 +1,42 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class TextInput extends Component {
-    state = {
-        formData: this.props.location
+const TextInput = (props) => {
+    const handleChangeText = e => {
+        props.handleUpdateText(e.target.value);
     }
 
-    handleChangeText = e => {
-        this.props.handleUpdateText(e.target.value);
+    const handleChangeColor = e => {
+        props.handleColorUpdate(e.target.value);
     }
 
-    handleChangeColor = e => {
-        this.props.handleColorUpdate(e.target.value);
-    }
-
-    handleClearInput = e => {
-        this.props.handleUpdateText('');
-        this.props.handleColorUpdate('');
+    const handleClearInput = e => {
+        props.handleUpdateText('');
+        props.handleColorUpdate('');
         document.getElementById('input-form').reset();
         document.getElementById('colorOutput').innerHTML = '';
         document.getElementById('shadowOutput').innerHTML = '';
     }
 
-    render() {
-        return (
-            <div className='form-wrapper'>
-                <form id='input-form'>
-                    <input id='text' autoComplete='off' onChange={this.handleChangeText} placeholder="Enter text here!"></input><br />
-                    <div>Color Slider</div>
-                    <input type='range' id='color' min='0' max='360' onChange={this.handleChangeColor} /><br />
-                    <label htmlFor='color'>Glow Intensity</label><br />
-                    <input type='range' id='glow' disabled /><br />
-                </form>
-                <div className='buttons'>
-                    <button onClick={this.handleClearInput}>Clear</button>
-                    <button disabled>Copy</button>
-                </div>
+    return (
+        <div className='form-wrapper'>
+            <form id='input-form'>
+
+                <span>
+                <label htmlFor='text'>Enter Text:</label>
+                <input id='text' autoComplete='off' onChange={handleChangeText} maxLength="15"></input>
+                </span>
+
+                <span>
+                <label htmlFor='color'>Choose Color:</label>
+                <input type='range' id='color' min='0' max='360' onChange={handleChangeColor}/>
+                </span>
+
+            </form>
+            <div className='buttons'>
+                <button onClick={handleClearInput}>Clear</button>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default TextInput;

@@ -1,11 +1,11 @@
 import React from 'react';
 
 const CodeOutput = () => (
-    <div className='codeWrapper'>
+    <code className='codeWrapper'>
         <span>color: <span id='colorOutput'></span></span>
         text-shadow:
         <div className='shadowOutput' id='shadowOutput'></div>
-    </div>
+    </code>
 )
 
 export default CodeOutput;

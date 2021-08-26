@@ -12,13 +12,13 @@ class App extends Component {
     color: '',
   };
 
-  handleUpdateText = async updatedText => {
+  handleUpdateText = updatedText => {
     this.setState({
       text: updatedText
     })
   }
 
-  handleColorUpdate = async updatedColor => {
+  handleColorUpdate = updatedColor => {
     hslCSS(updatedColor);
   }
 
@@ -26,25 +26,25 @@ class App extends Component {
     return (
       <div className='App'>
         <header className='App-header'>
-          Neon Text Generator
+          <h1>Neon Text CSS Generator</h1>
         </header>
-        <main className='App-main'>
+        
           <Router>
             <Route exact path='/' render={() =>
-              <div className='in-and-out'>
+              <main className='App-main'>
+                <TextOutput
+                  text={this.state.text}
+                />
+                <CodeOutput />
                 <OptionsInput
+                  output={this.state}
+                  handleDefaultOptions={this.handleDefaultOptions}
                   handleUpdateText={this.handleUpdateText}
                   handleColorUpdate={this.handleColorUpdate}
                 />
-                <div>
-                  <TextOutput
-                    text={this.state.text}/>
-                  <CodeOutput />
-                </div>
-              </div>
+              </main>
             } />
           </Router>
-        </main>
         <footer className='App-footer'>
           Made by Sarah W || <a href='https://www.linkedin.com/in/sarah--williams/'>LinkedIn</a>  <a href='https://github.com/arghmatey'>Github</a> || <a href='https://www.dafont.com/clip.font'>Font Used</a>
         </footer>
