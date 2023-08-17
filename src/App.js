@@ -4,7 +4,7 @@ import OptionsInput from './components/OptionsInput';
 import TextOutput from './components/TextOutput';
 import CodeOutput from './components/CodeOutput';
 import { hslCSS } from './utils/utils';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   state = {
