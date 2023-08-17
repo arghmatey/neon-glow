@@ -1,13 +1,13 @@
 # This workflow is for:
-#   Triggers: any push to main branch
-#   Deployment: www.neoncss.com
+#   Triggers: any push to dev branch
+#   Deployment: none
 
-name: Build and deploy
+name: Build
 
 on:
   push:
     branches:
-      - main
+      - dev
   workflow_dispatch:
 
 env:
@@ -31,8 +31,3 @@ jobs:
 
       - name: npm build
         run: npm run build
-
-      - name: Deploy
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
