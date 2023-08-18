@@ -16,7 +16,6 @@ const App = () => {
   const [ output, setOutput ] = useState(INITIAL_OUTPUT)
 
   const handleUpdateColor = hue => {
-    console.log(hue)
     getInlineStyle(hue);
     setOutput(getCSSOutput(hue))
   }
