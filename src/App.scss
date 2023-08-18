@@ -20,7 +20,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.App-header h1 {
+.header h1 {
   text-align: center;
   font: normal 48px neon-sign;
   color:rgb(46, 255, 231);
@@ -90,14 +90,21 @@ input {
   margin: 0 20px;
 }
 
-.App-footer {
+.footer {
   background-color: lightgrey;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 10px;
-  width: 100%;
+  text-align: right;
 }
 
 a {
   color: black;
+
+  .icon {
+    height: 2rem;
+    width: 2rem;
+  }
 }

@@ -4,6 +4,7 @@ import OptionsInput from './components/options-input';
 import TextOutput from './components/text-output';
 import CodeOutput from './components/code-output';
 import Header from './components/header';
+import Footer from './components/footer';
 import { hslCSS } from './utils/utils';
 import './App.scss';
 
@@ -44,9 +45,8 @@ class App extends Component {
               </main>
             } />
           </Router>
-        <footer className='App-footer'>
-          Made by Sarah W || <a href='https://www.linkedin.com/in/sarah--williams/'>LinkedIn</a>  <a href='https://github.com/arghmatey'>Github</a> || <a href='https://www.dafont.com/clip.font'>Font Used</a>
-        </footer>
+        
+        <Footer />
       </div>
     )
   }
