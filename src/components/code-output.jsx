@@ -1,11 +1,9 @@
 import React from 'react';
 
-const CodeOutput = () => (
-    <code className='codeWrapper'>
-        <span>color: <span id='colorOutput'></span></span>
-        text-shadow:
-        <div className='shadowOutput' id='shadowOutput'></div>
-    </code>
+const CodeOutput = ({ output }) => (
+    <pre className='code-output'>
+        {output}
+    </pre>
 )
 
 export default CodeOutput;

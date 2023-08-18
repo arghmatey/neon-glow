@@ -37,7 +37,7 @@ code {
     ". options options .";
 }
 
-.textWrapper, .codeWrapper {
+.text-output, .code-output {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +61,7 @@ input {
   margin-bottom: 7px;
 }
 
-.textWrapper {
+.text-output {
   grid-area: text;
   background-color: black;
   font-family: neon-sign;
@@ -72,7 +72,7 @@ input {
   color: white;
 }
 
-.codeWrapper {
+.code-output {
   grid-area: code;
   font-family: monospace;
   justify-content: left;
@@ -82,12 +82,6 @@ input {
   padding: 24px;
   height: 200px;
   width: 400px;
-}
-
-.shadowOutput {
-  font-family: monospace;
-  text-align: left;
-  margin: 0 20px;
 }
 
 .footer {

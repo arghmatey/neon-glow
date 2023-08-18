@@ -13,8 +13,6 @@ const TextInput = (props) => {
         props.handleUpdateText('');
         props.handleColorUpdate('');
         document.getElementById('input-form').reset();
-        document.getElementById('colorOutput').innerHTML = '';
-        document.getElementById('shadowOutput').innerHTML = '';
     }
 
     return (
