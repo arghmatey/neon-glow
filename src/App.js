@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import OptionsInput from './components/options-input';
 import TextOutput from './components/text-output';
@@ -8,48 +8,39 @@ import Footer from './components/footer';
 import { hslCSS } from './utils/utils';
 import './App.scss';
 
-class App extends Component {
-  state = {
-    text: '',
-    color: '',
-  };
+const App = () => {
+  const [ text, setText ] = useState('');
 
-  handleUpdateText = updatedText => {
-    this.setState({
-      text: updatedText
-    })
+  const handleUpdateText = updatedText => {
+    setText(updatedText)
   }
 
-  handleColorUpdate = updatedColor => {
+  const handleColorUpdate = updatedColor => {
     hslCSS(updatedColor);
   }
 
-  render() {
-    return (
-      <div className='App'>
-          <Header />
-        
-          <Router>
-            <Route exact path='/' render={() =>
-              <main className='App-main'>
-                <TextOutput
-                  text={this.state.text}
-                />
-                <CodeOutput />
-                <OptionsInput
-                  output={this.state}
-                  handleDefaultOptions={this.handleDefaultOptions}
-                  handleUpdateText={this.handleUpdateText}
-                  handleColorUpdate={this.handleColorUpdate}
-                />
-              </main>
-            } />
-          </Router>
-        
-        <Footer />
-      </div>
-    )
-  }
+  return (
+    <div className='App'>
+        <Header />
+      
+        <Router>
+          <Route exact path='/' render={() =>
+            <main className='main'>
+              <TextOutput
+                text={text}
+              />
+              <CodeOutput />
+              <OptionsInput
+                handleUpdateText={handleUpdateText}
+                handleColorUpdate={handleColorUpdate}
+              />
+            </main>
+          } />
+        </Router>
+      
+      <Footer />
+    </div>
+  )
 }
 
 export default App;
