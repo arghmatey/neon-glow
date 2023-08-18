@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import OptionsInput from './components/OptionsInput';
-import TextOutput from './components/TextOutput';
-import CodeOutput from './components/CodeOutput';
+import OptionsInput from './components/options-input';
+import TextOutput from './components/text-output';
+import CodeOutput from './components/code-output';
 import { hslCSS } from './utils/utils';
 import './App.scss';
 
