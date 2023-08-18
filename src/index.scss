@@ -47,7 +47,6 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    overflow: hidden;
 }
 
 .header {
@@ -74,7 +73,6 @@ body {
     justify-content: center;
     gap: 2em;
     padding: 2em;
-    overflow-x: scroll;
 
     &>* {
         flex: 1;
@@ -89,6 +87,7 @@ body {
         background-color: whitesmoke;
         border-radius: $borderRadius;
         padding: 2em;
+        max-height: 350px;
     }
 
     @media (width <= 800px) {
@@ -100,8 +99,11 @@ body {
             width: 100%;
         }
 
+        &-left {
+            flex: none;
+        }
+
         &-right {
-            overflow-y: scroll;
             padding: 1em;
         }
     }
