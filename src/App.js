@@ -6,41 +6,42 @@ import CodeOutput from './components/code-output';
 import Header from './components/header';
 import Footer from './components/footer';
 import { getCSSOutput, getInlineStyle } from './utils/utils';
-import './App.scss';
 
 const INITIAL_OUTPUT = `color:
 text-shadow:`;
 
+const TEXT_OUTPUT = 'greetings'
+
 const App = () => {
-  const [ text, setText ] = useState('');
   const [ output, setOutput ] = useState(INITIAL_OUTPUT)
 
-  const handleUpdateText = updatedText => {
-    setText(updatedText)
-  }
-
   const handleUpdateColor = hue => {
+    console.log(hue)
     getInlineStyle(hue);
     setOutput(getCSSOutput(hue))
   }
 
   return (
-    <div className='App'>
+    <div className='app'>
         <Header />
       
         <Router>
           <Route exact path='/' render={() =>
             <main className='main'>
-              <TextOutput
-                text={text}
-              />
-              <CodeOutput 
-                output={output}
-              />
-              <OptionsInput
-                handleUpdateText={handleUpdateText}
-                handleColorUpdate={handleUpdateColor}
-              />
+              <section className="main-left">
+                <TextOutput
+                  text={TEXT_OUTPUT}
+                />
+              </section>
+
+              <section className='main-right'>
+                <OptionsInput
+                  onColorChange={handleUpdateColor}
+                />
+                <CodeOutput 
+                  output={output}
+                />
+              </section>
             </main>
           } />
         </Router>
